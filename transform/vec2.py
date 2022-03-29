@@ -1,37 +1,24 @@
 
 class vec2:
 
-    global x
-    global y
-
     def __init__(self, _x, _y):
-        global x
-        global y
-        x = _x
-        y = _y
+        self.x = _x
+        self.y = _y
     
     def pos(self):
-        global x
-        global y
-        return [x,y]
+        return [self.x,self.y]
     
     def pos_str(self):
-        global x
-        global y
-        return str(f"({x},{y})")
+        return str(f"({self.x},{self.y})")
     
     def translate(self, _x=None, _y=None):
-        global x
-        global y
-        if(_x != None): x += _x
-        if(_y != None): y += _y
+        if(_x != None): self.x += _x
+        if(_y != None): self.y += _y
     
     # --- get/set --- #
     
     def get_x(self):
-        global x
-        return x
+        return self.x
     
     def get_y(self):
-        global y
-        return y
+        return self.y

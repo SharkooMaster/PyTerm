@@ -4,63 +4,45 @@ import os
 
 class renderer:
 
-    global screen_w
-    global screen_h
+    def __init__(self, _screen_h, _screen_w, _debugger):
+        self.debugger = _debugger
 
-    global grid
+        self.debugger.log("renderer init debugger")
 
-    global objs
+        self.screen_w = _screen_w
+        self.screen_h = _screen_h
 
-    def __init__(self, _screen_h, _screen_w):
-        global screen_w
-        global screen_h
-        global grid
-        global objs
+        self.grid = ((("i" * self.screen_w) + "\n") * self.screen_h)
 
-        screen_w = _screen_w
-        screen_h = _screen_h
-
-        grid = ((("i" * screen_w) + "\n") * screen_h)
-
-        objs = []
+        self.objs = []
 
     def cls(self):
         os.system('cls' if os.name=='nt' else 'clear')
     
     def get_obj(self):
-        global objs
-        return objs
+        return self.objs
     
     def add_obj(self, obj):
-        global objs
-        objs.append(obj)
+        self.objs.append(obj)
     
     def inject_objs(self):
-        global screen_w
-        global screen_h
-        global grid
-        global objs
 
-        grid_clean = grid.replace("\n", "")
+        grid_clean = self.grid.replace("\n", "")
         tempGrid = list(grid_clean)
 
-        for obj in objs:
+        for obj in self.objs:
             for pos in obj.render():
                 tempGrid[pos] = obj.get_char()
         
-        for j in range(screen_h):
-            tempGrid.insert((j * screen_w) +(j), "\n")
+        for j in range(self.screen_h):
+            tempGrid.insert((j * self.screen_w) +(j), "\n")
         
-        grid = ''.join(tempGrid)
+        self.grid = ''.join(tempGrid)
     
     def render(self):
-        global screen_w
-        global screen_h
-        global grid
-
         while True:
             self.cls()
             self.inject_objs()
 
-            print(grid)
+            print(self.grid)
             time.sleep(0.5)
