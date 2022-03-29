@@ -11,11 +11,13 @@ class main:
 
         world = renderer(20,40, self.debugger)
 
+        # Obj 0
         wall = obj(_screen_w=40, _screen_h=20, _h = 5, _w = 8, _x=0)
         world.add_obj(wall)
+        # Obj 1
         wall_2 = obj(_screen_w=40, _screen_h=20, _h = 10, _w = 8, _x=10, _char='0')
         world.add_obj(wall_2)
-    
+
         world.render()
 
 main()

@@ -1,5 +1,6 @@
 
 import time
+import threading
 import os
 
 class renderer:
@@ -38,7 +39,7 @@ class renderer:
             tempGrid.insert((j * self.screen_w) +(j), "\n")
         
         self.grid = ''.join(tempGrid)
-    
+
     def render(self):
         while True:
             self.cls()
