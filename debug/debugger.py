@@ -24,7 +24,7 @@ class debugger:
     def writeToLogFile(self):
         global path
         global logFile
-        logFile = open(path, "w")
+        logFile = open(path, "a")
 
     def closeLogFile(self):
         global logFile
