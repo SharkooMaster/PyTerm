@@ -7,13 +7,13 @@ Required to run:
 Note:
   The main file is only for my sake, its technically just a template for others to kind of understand how the code runs in basic form until im done with the library and have a documentation page set up
 
-TEMPLATE:
+#TEMPLATE:
 "
-# PreProcess
+            PreProcess
 self.debugger = conf().get_debugger()
 self.debugger.log("Conf init : main")
 
-# RunTime_handlers
+          RunTime_handlers
 self.minRate    = 0.5
 self.calcRate   = 0.7
 self.renderRate = 0.5
