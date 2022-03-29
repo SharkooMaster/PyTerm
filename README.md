@@ -9,12 +9,12 @@ Note:
 
 # TEMPLATE:
 
-## PreProcess
+### PreProcess
 ```
 self.debugger = conf().get_debugger()<br/>
 self.debugger.log("Conf init : main")<br/>
 ```
-## RunTime_handlers
+### RunTime_handlers
 ```
 self.minRate    = 0.5<br/>
 self.calcRate   = 0.7<br/>
