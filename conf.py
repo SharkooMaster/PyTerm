@@ -1,6 +1,5 @@
 
 from debug.debugger import debugger
-import thread
 
 class conf:
 
