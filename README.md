@@ -9,12 +9,16 @@ Note:
 
 #TEMPLATE:
 
-PreProcess
-  self.debugger = conf().get_debugger()<br/>
-  self.debugger.log("Conf init : main")<br/>
-RunTime_handlers
-  self.minRate    = 0.5<br/>
-  self.calcRate   = 0.7<br/>
-  self.renderRate = 0.5<br/>
-  self.th = threadingHandler(self.calcRate, self.renderRate)<br/>
+##PreProcess
+```
+self.debugger = conf().get_debugger()<br/>
+self.debugger.log("Conf init : main")<br/>
+```
+##RunTime_handlers
+```
+self.minRate    = 0.5<br/>
+self.calcRate   = 0.7<br/>
+self.renderRate = 0.5<br/>
+self.th = threadingHandler(self.calcRate, self.renderRate)<br/>
+```
 // These are needed to run the engine. You may of course adjust the parameters, thats why i have them open and not automated. More control
