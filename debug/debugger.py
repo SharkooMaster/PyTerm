@@ -1,4 +1,4 @@
-
+import os
 import time
 from datetime import date
 
@@ -20,6 +20,7 @@ class debugger:
         logFile.write("### init ###\n")
         logFile.flush()
         logFile.close()
+        os.system("kitty python ./debug/terminalLog.py &")
 
     def writeToLogFile(self):
         global path

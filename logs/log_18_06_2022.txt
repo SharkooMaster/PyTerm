@@ -1,0 +1,5 @@
+### init ###
+ --- > Conf init : main
+ --- > renderer init debugger
+ --- > main thread cycle <<>>
+ --- > render thread cycle <<>>

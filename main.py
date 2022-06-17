@@ -36,12 +36,12 @@ class main:
         while True:
             self.th.runTh_all()
             time.sleep(self.minRate)
-        
+
     def th_render_content(self):
         self.debugger.log("render thread cycle <<>>")
         self.world.render()
-    
+
     def th_main_content(self):
-        self.debugger.log("main thread cycle <<>>") 
+        self.debugger.log("main thread cycle <<>>")
 
 main()
